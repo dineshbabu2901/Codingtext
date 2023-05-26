@@ -1,0 +1,14 @@
+const arr = ["a", "b", "c", "a", "b", "c", "a", "e"];
+
+// create an object to store the counts
+const counts = {};
+
+// loop through the array and update the counts object
+arr.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
+
+// loop through the counts object and print the odd counts
+for (const [key, value] of Object.entries(counts)) {
+   if (value % 2 !== 0) {
+      console.log(`${key} = ${value}`);
+   }
+}
