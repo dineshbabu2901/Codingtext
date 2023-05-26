@@ -1,0 +1,20 @@
+const arr = ["a","b","c","a","b","c","a","e"];
+const stringCountMap = new Map();
+for (const str of arr) {
+  if (stringCountMap.has(str)) {
+    stringCountMap.set(str, stringCountMap.get(str) + 1);
+  } else {
+    stringCountMap.set(str, 1);
+  }
+}
+for (const [key, value] of stringCountMap) {
+  if (value % 2 !== 0) {
+    console.log(`String: ${key}, Count: ${value}`);
+  }
+}
+
+
+Output
+String: a, Count: 3    
+String: e, Count: 1    
+
