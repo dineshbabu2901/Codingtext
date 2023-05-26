@@ -12,3 +12,10 @@ for (const [key, value] of stringCountMap) {
     console.log(`String: ${key}, Count: ${value}`);
   }
 }
+
+
+
+This will output:
+
+String: a, Count: 3
+String: e, Count: 1
